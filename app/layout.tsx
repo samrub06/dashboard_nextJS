@@ -1,3 +1,7 @@
+ 
+import '@/app/ui/global.css';
+import { inter, lusitana } from './fonts';
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +9,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body
+        className={`${inter.variable} ${lusitana.variable} font-sans antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
